@@ -185,6 +185,33 @@
             object-fit:cover;
             border-bottom:1px solid var(--line);
             background:#fff;
+            cursor:zoom-in;
+        }
+
+        #lightbox{
+            display:none;
+            position:fixed;
+            inset:0;
+            background:rgba(2,6,16,0.92);
+            z-index:100;
+            align-items:center;
+            justify-content:center;
+            padding:30px;
+            cursor:zoom-out;
+        }
+        #lightbox.open{ display:flex; }
+        #lightbox img{
+            max-width:95%;
+            max-height:90%;
+            border-radius:6px;
+            box-shadow:0 10px 40px rgba(0,0,0,0.5);
+        }
+        #lightbox .lightbox-hint{
+            position:absolute;
+            top:20px;
+            right:30px;
+            color:var(--muted);
+            font-size:13px;
         }
         .project-tag{
             color:var(--accent);
@@ -203,6 +230,10 @@
             font-size:15px;
             margin:0;
         }
+        .project-card.wide{
+            grid-column:1 / -1;
+            border-color:#f5b95a4d;
+        }
         .status-pill{
             position:absolute;
             top:26px;
@@ -213,6 +244,41 @@
             background:var(--accent-dim);
             color:var(--accent);
             letter-spacing:0.5px;
+        }
+        .academic-tag{
+            color:#f5b95a;
+        }
+        .status-pill.academic{
+            background:#f5b95a26;
+            color:#f5b95a;
+        }
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            gap:12px;
+            margin-top:20px;
+        }
+        .gallery-item{
+            cursor:zoom-in;
+        }
+        .gallery-item img{
+            width:100%;
+            height:110px;
+            object-fit:cover;
+            border-radius:6px;
+            border:1px solid var(--line);
+            background:#fff;
+            display:block;
+        }
+        .gallery-item span{
+            display:block;
+            font-size:12px;
+            color:var(--muted);
+            margin-top:6px;
+            text-align:center;
+        }
+        @media (max-width:800px){
+            .gallery-grid{ grid-template-columns:repeat(2, 1fr); }
         }
 
         /* ---------- CONTACT ---------- */
@@ -338,7 +404,7 @@
             </p>
         </div>
         <div class="project-card">
-            <img class="project-thumb" src="elu.jpg" alt="Existing Land Use (ELU) map output">
+            <img class="project-thumb" src="elu.jpg" alt="Existing Land Use (ELU) map output" onclick="openLightbox('elu.jpg')">
             <span class="project-tag mono">TEJYOG INFRATECH · 2024–2025</span>
             <h3>Existing Land Use (ELU) Mapping</h3>
             <p>
@@ -348,7 +414,7 @@
             </p>
         </div>
         <div class="project-card">
-            <img class="project-thumb" src="plu.jpg" alt="Proposed Land Use (PLU) map output">
+            <img class="project-thumb" src="plu.jpg" alt="Proposed Land Use (PLU) map output" onclick="openLightbox('plu.jpg')">
             <span class="project-tag mono">TEJYOG INFRATECH · 2024–2025</span>
             <h3>Proposed Land Use (PLU) Mapping</h3>
             <p>
@@ -358,7 +424,7 @@
             </p>
         </div>
         <div class="project-card">
-            <img class="project-thumb" src="building-footprints.jpg" alt="Digitized building footprints">
+            <img class="project-thumb" src="building-footprints.jpg" alt="Digitized building footprints" onclick="openLightbox('building-footprints.jpg')">
             <span class="project-tag mono">TEJYOG INFRATECH · 2024–2025</span>
             <h3>Building Footprint Digitization</h3>
             <p>
@@ -366,6 +432,49 @@
                 with attribute creation and data integration for land-use
                 and planning layers.
             </p>
+        </div>
+
+        <div class="project-card wide">
+            <span class="status-pill academic mono">ACADEMIC PROJECT</span>
+            <span class="project-tag academic-tag mono">UNIVERSITY · P.G. B.SC GIS &amp; REMOTE SENSING</span>
+            <h3>Morphometric Analysis of Ram River Watershed</h3>
+            <p>
+                A watershed-scale morphometric study of the Ram River basin
+                (Pune district, Maharashtra) carried out in ArcGIS Pro,
+                analyzing terrain and drainage characteristics — aspect,
+                slope, hillshade, drainage density, stream order (Strahler's
+                method), and elevation/relief profile.
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('study-area.jpg')">
+                    <img src="study-area.jpg" alt="Study area — Ram River Watershed location">
+                    <span>Study Area</span>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('aspect-map.jpg')">
+                    <img src="aspect-map.jpg" alt="Aspect map">
+                    <span>Aspect Map</span>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('slope-map.jpg')">
+                    <img src="slope-map.jpg" alt="Slope map">
+                    <span>Slope Map</span>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('hillshade.jpg')">
+                    <img src="hillshade.jpg" alt="Hillshade map">
+                    <span>Hillshade Map</span>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('drainage-density.jpg')">
+                    <img src="drainage-density.jpg" alt="Drainage density map">
+                    <span>Drainage Density</span>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('stream-order.jpg')">
+                    <img src="stream-order.jpg" alt="Stream order map, Strahler's method">
+                    <span>Stream Order</span>
+                </div>
+                <div class="gallery-item" onclick="openLightbox('elevation-profile.jpg')">
+                    <img src="elevation-profile.jpg" alt="Slope relief elevation profile">
+                    <span>Elevation Profile</span>
+                </div>
+            </div>
         </div>
         <div class="project-card">
             <span class="project-tag mono">TEJYOG INFRATECH · TEAM LEAD</span>
@@ -393,5 +502,20 @@
 <footer>
     &copy; 2026 Shubham. Built with GIS precision.
 </footer>
+
+<div id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-hint">Click anywhere to close</span>
+    <img id="lightbox-img" src="" alt="Full size project image">
+</div>
+
+<script>
+    function openLightbox(src){
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox(){
+        document.getElementById('lightbox').classList.remove('open');
+    }
+</script>
 </body>
 </html>
