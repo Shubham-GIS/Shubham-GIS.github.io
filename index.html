@@ -175,6 +175,16 @@
             border-radius:10px;
             padding:26px;
             position:relative;
+            overflow:hidden;
+        }
+        .project-thumb{
+            display:block;
+            width:calc(100% + 52px);
+            margin:-26px -26px 18px -26px;
+            height:180px;
+            object-fit:cover;
+            border-bottom:1px solid var(--line);
+            background:#fff;
         }
         .project-tag{
             color:var(--accent);
@@ -328,17 +338,29 @@
             </p>
         </div>
         <div class="project-card">
+            <img class="project-thumb" src="elu.jpg" alt="Existing Land Use (ELU) map output">
             <span class="project-tag mono">TEJYOG INFRATECH · 2024–2025</span>
-            <h3>Municipal ELU / PLU Mapping</h3>
+            <h3>Existing Land Use (ELU) Mapping</h3>
             <p>
-                Prepared Existing Land Use and Proposed Land Use datasets for
-                Municipal Corporation planning projects in Nashik, Dhule, and
-                Kolhapur using ArcGIS Pro and Google Earth Pro.
+                Prepared Existing Land Use datasets for a Municipal
+                Corporation planning project, classifying parcels by current
+                use using ArcGIS Pro.
             </p>
         </div>
         <div class="project-card">
+            <img class="project-thumb" src="plu.jpg" alt="Proposed Land Use (PLU) map output">
             <span class="project-tag mono">TEJYOG INFRATECH · 2024–2025</span>
-            <h3>Planning Map Digitization</h3>
+            <h3>Proposed Land Use (PLU) Mapping</h3>
+            <p>
+                Developed Proposed Land Use plans for municipal planning
+                submissions — zoning parcels for residential, commercial,
+                and infrastructure use.
+            </p>
+        </div>
+        <div class="project-card">
+            <img class="project-thumb" src="building-footprints.jpg" alt="Digitized building footprints">
+            <span class="project-tag mono">TEJYOG INFRATECH · 2024–2025</span>
+            <h3>Building Footprint Digitization</h3>
             <p>
                 Digitized planning maps into GIS-ready spatial databases,
                 with attribute creation and data integration for land-use
