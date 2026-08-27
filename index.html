@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham | GIS Technician</title>
+    <title>Shubham Dawkhar | GIS Specialist</title>
 
     <!-- Favicon: simple "S" monogram, matches site theme -->
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='45' font-family='Arial, Helvetica, sans-serif' font-size='36' font-weight='bold' fill='%2338bdf8' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
@@ -15,12 +15,12 @@
 
     <!-- Social share preview (LinkedIn, WhatsApp, etc.) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Shubham | GIS Technician">
+    <meta property="og:title" content="Shubham Dawkhar | GIS Specialist">
     <meta property="og:description" content="GIS Specialist — Land Use Mapping | QA/QC | Digitization. Explore projects in ELU/PLU mapping, digitization, and geospatial annotation.">
     <meta property="og:url" content="https://shubham-gis.github.io/">
     <meta property="og:image" content="https://shubham-gis.github.io/elu.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Shubham | GIS Technician">
+    <meta name="twitter:title" content="Shubham Dawkhar | GIS Specialist">
     <meta name="twitter:description" content="GIS Specialist — Land Use Mapping | QA/QC | Digitization.">
     <meta name="twitter:image" content="https://shubham-gis.github.io/elu.jpg">
     <style>
@@ -71,6 +71,8 @@
         nav h2{
             color:var(--accent);
             margin:0;
+            font-size:20px;
+            white-space:nowrap;
         }
         nav ul{
             display:flex;
@@ -147,6 +149,50 @@
             color:var(--muted);
             line-height:1.9;
             font-size:16px;
+        }
+        .lead-summary{
+            font-size:18px !important;
+            line-height:1.6 !important;
+            color:var(--text) !important;
+            margin-bottom:30px;
+        }
+        .timeline{
+            position:relative;
+            padding-left:24px;
+            border-left:2px solid var(--line);
+        }
+        .timeline-item{
+            position:relative;
+            margin-bottom:26px;
+        }
+        .timeline-item:last-child{ margin-bottom:0; }
+        .timeline-dot{
+            position:absolute;
+            left:-30px;
+            top:5px;
+            width:12px;
+            height:12px;
+            border-radius:50%;
+            background:var(--accent);
+            border:3px solid var(--bg);
+        }
+        .timeline-date{
+            display:block;
+            color:var(--accent);
+            font-size:12px;
+            letter-spacing:0.5px;
+            margin-bottom:4px;
+        }
+        .timeline-item h4{
+            margin:0 0 4px 0;
+            font-size:15.5px;
+            color:var(--text);
+        }
+        .timeline-item p{
+            margin:0;
+            font-size:14px !important;
+            color:var(--muted);
+            line-height:1.5 !important;
         }
 
         /* GIS-style "layer panel" for skills */
@@ -264,6 +310,20 @@
             color:var(--accent);
             letter-spacing:0.5px;
         }
+        .chip-row{
+            display:flex;
+            flex-wrap:wrap;
+            gap:8px;
+            margin-top:14px;
+        }
+        .chip{
+            font-size:11.5px;
+            padding:4px 10px;
+            border-radius:20px;
+            background:#1c2947;
+            color:var(--muted);
+            border:1px solid var(--line);
+        }
         .academic-tag{
             color:#f5b95a;
         }
@@ -310,6 +370,47 @@
             color:var(--muted);
             margin-bottom:30px;
         }
+        .contact-list{
+            display:flex;
+            flex-direction:column;
+            gap:14px;
+            max-width:480px;
+            margin:0 auto;
+        }
+        .contact-row{
+            display:flex;
+            align-items:center;
+            gap:16px;
+            padding:16px 22px;
+            border:1px solid var(--line);
+            border-radius:10px;
+            text-decoration:none;
+            color:var(--text);
+            background:var(--panel-2);
+            text-align:left;
+        }
+        .contact-row:hover{
+            border-color:var(--accent);
+        }
+        .contact-icon{
+            width:22px;
+            height:22px;
+            flex-shrink:0;
+            stroke:var(--accent);
+        }
+        .contact-text{
+            display:flex;
+            flex-direction:column;
+        }
+        .contact-label{
+            font-size:11.5px;
+            color:var(--muted);
+            letter-spacing:0.5px;
+        }
+        .contact-value{
+            font-size:15px;
+            color:var(--text);
+        }
         .contact-links{
             display:flex;
             justify-content:center;
@@ -349,7 +450,7 @@
 </head>
 <body>
 <nav>
-    <h2>Shubham</h2>
+    <h2>Shubham Dawkhar</h2>
     <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -367,32 +468,46 @@
         Annotation.
     </p>
     <a class="btn" href="#projects">View Portfolio</a>
-    <a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--accent);margin-left:12px;" href="resume.pdf" download>Download Resume</a>
+    <a class="btn" style="background:transparent;border:1px solid var(--accent);color:var(--accent);margin-left:12px;" href="resume.pdf" download="shubham-dawkhar-gis-specialist-resume.pdf">Download Resume</a>
 </section>
 
 <section id="about">
     <span class="eyebrow mono">// ABOUT</span>
     <h2 class="section-title">Who I am</h2>
     <div class="about-grid">
-        <p>
-            I'm a GIS Specialist with experience across geospatial data
-            annotation, ELU/PLU mapping, and GIS quality assurance for both
-            US-based geospatial projects and Indian municipal planning work.
-            At <strong>Tejyog Infratech Consulting Engineers</strong>, I
-            worked on Municipal Corporation planning projects for Nashik,
-            Dhule, and Kolhapur — preparing Existing Land Use (ELU) and
-            Proposed Land Use (PLU) datasets, digitizing planning maps, and
-            coordinating a GIS team to keep deliverables on schedule.
-            <br><br>
-            I'm currently a GIS Specialist at <strong>Zuru Services</strong>,
-            working on a US-based geospatial project — annotating and classifying geospatial
-            features, interpreting map imagery, and correcting inconsistencies
-            in spatial datasets before delivery.
-            <br><br>
-            I hold a P.G. B.Sc. in GIS &amp; Remote Sensing (Savitribai
-            Phule Pune University) and a Master's in Geography (LVH College,
-            Nashik).
-        </p>
+        <div>
+            <p class="lead-summary">
+                GIS Specialist working on a US-based geospatial annotation
+                project, with a background in Indian municipal land-use
+                mapping, digitization, and QA/QC.
+            </p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date mono">2025 — PRESENT</span>
+                    <h4>GIS Specialist · Zuru Services</h4>
+                    <p>Geospatial data annotation for a US-based project.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date mono">2024 — 2025</span>
+                    <h4>GIS Analyst / Team Coordinator · Tejyog Infratech</h4>
+                    <p>ELU/PLU mapping &amp; digitization for Nashik, Dhule, and Kolhapur municipal planning.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date mono">2022 — 2023</span>
+                    <h4>P.G. B.Sc. GIS &amp; Remote Sensing</h4>
+                    <p>Savitribai Phule Pune University</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-dot"></span>
+                    <span class="timeline-date mono">2019 — 2021</span>
+                    <h4>Master's in Geography</h4>
+                    <p>LVH College, Nashik</p>
+                </div>
+            </div>
+        </div>
         <div class="layer-panel">
             <div class="layer-panel-header mono">TOOLS &amp; SKILLS</div>
             <div class="layer-row"><span class="layer-swatch"></span><span>ArcGIS Pro / ArcMap</span></div>
@@ -403,6 +518,7 @@
             <div class="layer-row"><span class="layer-swatch"></span><span>ELU / PLU Mapping</span></div>
             <div class="layer-row"><span class="layer-swatch"></span><span>Spatial Data Digitization</span></div>
             <div class="layer-row"><span class="layer-swatch"></span><span>GIS QA / QC</span></div>
+            <div class="layer-row"><span class="layer-swatch"></span><span>Team Coordination</span></div>
         </div>
     </div>
 </section>
@@ -420,6 +536,11 @@
                 US-based geospatial project — interpreting map imagery and
                 correcting inconsistencies before delivery.
             </p>
+            <div class="chip-row">
+                <span class="chip">Geospatial Annotation</span>
+                <span class="chip">QA/QC</span>
+                <span class="chip">Google Maps</span>
+            </div>
         </div>
         <div class="project-card">
             <img class="project-thumb" src="elu.jpg" alt="Existing Land Use (ELU) map output" onclick="openLightbox('elu.jpg')">
@@ -430,6 +551,11 @@
                 Corporation planning project, classifying parcels by current
                 use using ArcGIS Pro.
             </p>
+            <div class="chip-row">
+                <span class="chip">ArcGIS Pro</span>
+                <span class="chip">Google Earth Pro</span>
+                <span class="chip">ELU Mapping</span>
+            </div>
         </div>
         <div class="project-card">
             <img class="project-thumb" src="plu.jpg" alt="Proposed Land Use (PLU) map output" onclick="openLightbox('plu.jpg')">
@@ -440,6 +566,11 @@
                 submissions — zoning parcels for residential, commercial,
                 and infrastructure use.
             </p>
+            <div class="chip-row">
+                <span class="chip">ArcGIS Pro</span>
+                <span class="chip">PLU Mapping</span>
+                <span class="chip">Zoning</span>
+            </div>
         </div>
         <div class="project-card">
             <img class="project-thumb" src="building-footprints.jpg" alt="Digitized building footprints" onclick="openLightbox('building-footprints.jpg')">
@@ -450,16 +581,11 @@
                 with attribute creation and data integration for land-use
                 and planning layers.
             </p>
-        </div>
-
-        <div class="project-card">
-            <span class="project-tag mono">TEJYOG INFRATECH · TEAM LEAD</span>
-            <h3>GIS Team Coordination</h3>
-            <p>
-                Coordinated GIS team activities, assigned tasks, and
-                monitored progress to ensure timely submission of municipal
-                project deliverables.
-            </p>
+            <div class="chip-row">
+                <span class="chip">Digitization</span>
+                <span class="chip">Attribute Management</span>
+                <span class="chip">ArcGIS Pro</span>
+            </div>
         </div>
 
         <div class="project-card wide">
@@ -473,6 +599,11 @@
                 slope, hillshade, drainage density, stream order (Strahler's
                 method), and elevation/relief profile.
             </p>
+            <div class="chip-row">
+                <span class="chip">ArcGIS Pro</span>
+                <span class="chip">Terrain Analysis</span>
+                <span class="chip">Drainage &amp; Stream Order</span>
+            </div>
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox('study-area.jpg')">
                     <img src="study-area.jpg" alt="Study area — Ram River Watershed location">
@@ -511,15 +642,33 @@
     <span class="eyebrow mono">// CONTACT</span>
     <h2 class="section-title">Get in touch</h2>
     <p>Open to GIS and geospatial data roles — reach out below.</p>
-    <div class="contact-links">
-        <a href="mailto:shubhamdawkhar29@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/shubham-dawkhar-b76b76127" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/Shubham-GIS" target="_blank" rel="noopener">GitHub</a>
+    <div class="contact-list">
+        <a class="contact-row" href="mailto:shubhamdawkhar29@gmail.com">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+            <span class="contact-text">
+                <span class="contact-label">EMAIL</span>
+                <span class="contact-value">shubhamdawkhar29@gmail.com</span>
+            </span>
+        </a>
+        <a class="contact-row" href="https://www.linkedin.com/in/shubham-dawkhar-b76b76127" target="_blank" rel="noopener">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span class="contact-text">
+                <span class="contact-label">LINKEDIN</span>
+                <span class="contact-value">linkedin.com/in/shubham-dawkhar</span>
+            </span>
+        </a>
+        <a class="contact-row" href="https://github.com/Shubham-GIS" target="_blank" rel="noopener">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17l6-6-6-6"/><path d="M12 19h8"/></svg>
+            <span class="contact-text">
+                <span class="contact-label">GITHUB</span>
+                <span class="contact-value">github.com/Shubham-GIS</span>
+            </span>
+        </a>
     </div>
 </section>
 
 <footer>
-    &copy; 2026 Shubham. Built with GIS precision.
+    &copy; 2026 Shubham Dawkhar. Built with GIS precision.
 </footer>
 
 <div id="lightbox" onclick="closeLightbox()">
